@@ -3,23 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_login">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_login"
+        android:name="cn.edu.xmu.wlw.ui.login.LoginFragment"
+        android:label="登录"
+        tools:layout="@layout/login_layout"/>
+    <fragment
+        android:id="@+id/nav_device_manage"
         android:name="cn.edu.xmu.wlw.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="@string/device_manage"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_power_search"
         android:name="cn.edu.xmu.wlw.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/power_search"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_warn"
         android:name="cn.edu.xmu.wlw.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/air_quality"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

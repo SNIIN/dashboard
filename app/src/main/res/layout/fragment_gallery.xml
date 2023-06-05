@@ -6,6 +6,20 @@
     android:layout_height="wrap_content"
     tools:context=".ui.gallery.GalleryFragment">
 
+
+    <TextView
+        android:id="@+id/power_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/power_title"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/power_column_chart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/power_edittext" />
+
     <EditText
         android:id="@+id/power_edittext"
         android:layout_width="0dp"
@@ -29,18 +43,27 @@
         app:layout_constraintStart_toEndOf="@id/power_edittext"
         app:layout_constraintTop_toTopOf="@id/power_edittext" />
 
+
     <lecho.lib.hellocharts.view.ColumnChartView
         android:id="@+id/power_column_chart"
         android:layout_width="310dp"
         android:layout_height="270dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/power_pie_chart"
         app:layout_constraintLeft_toLeftOf="parent"
-
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/power_edittext"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/power_title" />
 
-
+    <lecho.lib.hellocharts.view.PieChartView
+        android:id="@+id/power_pie_chart"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/power_column_chart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
